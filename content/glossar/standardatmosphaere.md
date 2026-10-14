@@ -21,7 +21,7 @@ faq:
 
 ## Was ist die Standardatmosphäre?
 
-Die Standardatmosphäre, auch Normatmosphäre oder ISA (International Standard Atmosphere) genannt, ist ein genormtes Modell der Erdatmosphäre. Sie legt fest, wie [Luftdruck](/glossar/luftdruck/), Temperatur und Dichte der Luft mit der Höhe abnehmen. Das Modell beschreibt trockene Luft und mittlere Verhältnisse. Das tatsächliche Wetter weicht davon fast immer ab. Die Standardatmosphäre ist deshalb eine Rechengrundlage und keine Wettervorhersage.
+Die Standardatmosphäre, auch Normatmosphäre oder ISA (International Standard Atmosphere) genannt, ist ein genormtes Modell der Erdatmosphäre. Sie legt fest, wie Luftdruck, Temperatur und Dichte der Luft mit der Höhe abnehmen. Das Modell beschreibt trockene Luft und mittlere Verhältnisse. Das tatsächliche Wetter weicht davon fast immer ab. Die Standardatmosphäre ist deshalb eine Rechengrundlage und keine Wettervorhersage.
 
 ## Die wichtigsten Werte auf Meereshöhe
 
@@ -49,7 +49,7 @@ Der Luftdruck nimmt dagegen in allen Schichten mit der Höhe ab. Nahe dem Boden 
 - **Luftfahrt:** Höhenmesser sind nach der Standardatmosphäre geeicht. Auch Flugleistungen und Flughöhen (Flight Levels) beziehen sich darauf.
 - **Technik und Konstruktion:** Triebwerke, Flugzeuge und Raketen werden mit diesen Werten berechnet und verglichen.
 - **Messtechnik:** Wer Messwerte aus verschiedenen Orten und Höhen vergleichen will, rechnet sie auf die gleiche Bezugsatmosphäre um.
-- **Meteorologie:** Der [Luftdruck](/glossar/luftdruck/) wird auf Meereshöhe umgerechnet, damit Wetterkarten vergleichbar sind.
+- **Meteorologie:** Der Luftdruck wird auf Meereshöhe umgerechnet, damit Wetterkarten vergleichbar sind.
 
 ## Abgrenzung zu Normbedingungen
 

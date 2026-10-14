@@ -53,7 +53,7 @@ Das [Einheitenzeichen](/glossar/einheitenzeichen/) für den Mikroliter ist **µl
 - **µl in l:** durch 1.000.000 teilen. 5.000 µl sind 0,005 l.
 - **µl in mm³:** der Zahlenwert bleibt gleich. 75 µl sind 75 mm³.
 
-Wer größere Mengen in [Kubikmetern](/glossar/kubikmeter/) angibt, rechnet über den Liter: 1 m³ sind 1.000 Liter und damit 1 Milliarde µl.
+Wer größere Mengen in Kubikmetern angibt, rechnet über den Liter: 1 m³ sind 1.000 Liter und damit 1 Milliarde µl.
 
 ## Wo wird der Mikroliter verwendet?
 

@@ -23,7 +23,7 @@ faq:
 
 ## Was ist ein Pascal?
 
-Das Pascal ist im Internationalen Einheitensystem (SI) die [Maßeinheit](/glossar/masseinheit/) für den [Druck](/glossar/druck/) und für die mechanische Spannung. Sein [Einheitenzeichen](/glossar/einheitenzeichen/) ist Pa. Benannt ist es nach dem französischen Philosophen und Wissenschaftler Blaise Pascal (1623–1662), der sich unter anderem mit dem Verhalten von Flüssigkeiten und Gasen beschäftigte.
+Das Pascal ist im Internationalen Einheitensystem (SI) die [Maßeinheit](/glossar/masseinheit/) für den Druck und für die mechanische Spannung. Sein [Einheitenzeichen](/glossar/einheitenzeichen/) ist Pa. Benannt ist es nach dem französischen Philosophen und Wissenschaftler Blaise Pascal (1623–1662), der sich unter anderem mit dem Verhalten von Flüssigkeiten und Gasen beschäftigte.
 
 ## Definition
 

@@ -23,7 +23,7 @@ faq:
 
 ## Was ist eine Potenz?
 
-Eine Potenz ist eine Kurzschreibweise für das mehrfache Multiplizieren derselben Zahl mit sich selbst. Statt 3 · 3 · 3 · 3 schreibst du 3⁴ und liest „3 hoch 4“. Das Ergebnis heißt Potenzwert, in diesem Fall 81. Das Rechnen mit Potenzen nennt man Potenzieren. Es ist eine der [Grundrechenarten](/glossar/grundrechenarten/) der höheren Stufe, die auf der [Multiplikation](/glossar/multiplikation/) aufbaut.
+Eine Potenz ist eine Kurzschreibweise für das mehrfache Multiplizieren derselben Zahl mit sich selbst. Statt 3 · 3 · 3 · 3 schreibst du 3⁴ und liest „3 hoch 4“. Das Ergebnis heißt Potenzwert, in diesem Fall 81. Das Rechnen mit Potenzen nennt man Potenzieren. Es ist eine der Grundrechenarten der höheren Stufe, die auf der Multiplikation aufbaut.
 
 ## Bestandteile einer Potenz
 

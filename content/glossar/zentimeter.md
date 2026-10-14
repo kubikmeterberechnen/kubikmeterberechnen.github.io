@@ -23,7 +23,7 @@ faq:
 
 ## Was ist ein Zentimeter?
 
-Der Zentimeter ist eine [Längeneinheit](/glossar/laengeneinheit/) und ein Hundertstel eines [Meters](/glossar/meter/). Der Name setzt sich aus der Vorsilbe „Zenti“ (lateinisch *centum*, hundert) und „Meter“ zusammen. Das Einheitenzeichen ist cm. Der Zentimeter gehört zum Internationalen Einheitensystem (SI) und wird im Alltag besonders oft für Körpergrößen, Möbelmaße und Konfektionsgrößen verwendet.
+Der Zentimeter ist eine Längeneinheit und ein Hundertstel eines Meters. Der Name setzt sich aus der Vorsilbe „Zenti“ (lateinisch *centum*, hundert) und „Meter“ zusammen. Das Einheitenzeichen ist cm. Der Zentimeter gehört zum Internationalen Einheitensystem (SI) und wird im Alltag besonders oft für Körpergrößen, Möbelmaße und Konfektionsgrößen verwendet.
 
 ## Umrechnung von Zentimeter
 

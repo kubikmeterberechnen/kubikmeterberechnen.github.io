@@ -23,7 +23,7 @@ faq:
 
 ## Was ist eine Milliarde?
 
-Eine Milliarde ist das [Zahlwort](/glossar/zahlwort/) für die natürliche Zahl 1.000.000.000, also 10⁹. Sie entspricht tausend [Millionen](/glossar/million/). Das Wort stammt vom französischen milliard und geht wie Million auf das lateinische mille („tausend“) zurück. Anders als hundert oder tausend ist Milliarde ein Substantiv und wird großgeschrieben. Im Sinne von tausend Millionen ist es im Deutschen erst seit den französischen Kriegsentschädigungszahlungen an das Deutsche Kaiserreich 1870/1871 geläufig.
+Eine Milliarde ist das Zahlwort für die natürliche Zahl 1.000.000.000, also 10⁹. Sie entspricht tausend Millionen. Das Wort stammt vom französischen milliard und geht wie Million auf das lateinische mille („tausend“) zurück. Anders als hundert oder tausend ist Milliarde ein Substantiv und wird großgeschrieben. Im Sinne von tausend Millionen ist es im Deutschen erst seit den französischen Kriegsentschädigungszahlungen an das Deutsche Kaiserreich 1870/1871 geläufig.
 
 ## Die wichtigsten Schreibregeln
 

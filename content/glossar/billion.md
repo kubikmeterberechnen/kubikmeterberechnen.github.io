@@ -21,7 +21,7 @@ faq:
 
 ## Was ist eine Billion?
 
-Eine Billion ist eine [Zahl](/glossar/zahl/) mit zwölf Nullen: 1.000.000.000.000. Sie entspricht 10¹² und ist das Produkt aus einer Million und einer Million. Der Name leitet sich von „Bi-Million“ ab, also der zweiten Potenz der Million. Im deutschen Sprachraum gehört die Billion zur sogenannten langen Skala, in der jeder neue Zahlenname den Wert mit einer Million multipliziert.
+Eine Billion ist eine Zahl mit zwölf Nullen: 1.000.000.000.000. Sie entspricht 10¹² und ist das Produkt aus einer Million und einer Million. Der Name leitet sich von „Bi-Million“ ab, also der zweiten Potenz der Million. Im deutschen Sprachraum gehört die Billion zur sogenannten langen Skala, in der jeder neue Zahlenname den Wert mit einer Million multipliziert.
 
 ## Lange und kurze Skala
 

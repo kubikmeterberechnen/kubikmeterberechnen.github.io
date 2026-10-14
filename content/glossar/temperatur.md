@@ -23,7 +23,7 @@ faq:
 
 ## Was ist die Temperatur?
 
-Die Temperatur ist eine physikalische [Zustandsgröße](/glossar/zustandsgroesse/), die beschreibt, wie warm oder kalt ein Stoff, ein Körper oder ein Raum ist. Physikalisch ist sie ein Maß für die mittlere Bewegungsenergie der Teilchen: Je schneller sich Atome und Moleküle bewegen, desto höher ist die Temperatur. Das Formelzeichen ist T, bei Celsius-Werten oft auch t oder ϑ.
+Die Temperatur ist eine physikalische Zustandsgröße, die beschreibt, wie warm oder kalt ein Stoff, ein Körper oder ein Raum ist. Physikalisch ist sie ein Maß für die mittlere Bewegungsenergie der Teilchen: Je schneller sich Atome und Moleküle bewegen, desto höher ist die Temperatur. Das Formelzeichen ist T, bei Celsius-Werten oft auch t oder ϑ.
 
 Die Temperatur ist nicht dasselbe wie Wärme. Wärme ist übertragene Energie, die Temperatur beschreibt den Zustand eines Körpers. Ein Eimer kochendes Wasser hat dieselbe Temperatur wie ein Tropfen kochendes Wasser, enthält aber viel mehr Wärmeenergie.
 
