@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="hero">
+  <h1>{{ .Params.h1 }}</h1>
+  <p class="lead">{{ .Params.lead }}</p>
+</section>
+{{ partial "calculator.html" . }}
+<article class="prose" id="artikel">
+  {{ .Content }}
+  {{ partial "faq.html" . }}
+</article>
+{{ partial "related.html" . }}
+{{ partial "author-box.html" . }}
+{{ end }}

@@ -1,0 +1,9 @@
+{{ $a := site.Data.author }}
+<aside class="author-box" aria-label="Über den Autor">
+  <div class="avatar" aria-hidden="true">{{ substr $a.name 0 1 }}</div>
+  <div>
+    <p class="who"><a href="/autor/" rel="author">{{ $a.name }}</a>, {{ $a.role }}</p>
+    <p>{{ $a.bioShort }}</p>
+    <p class="updated">Zuletzt aktualisiert: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time></p>
+  </div>
+</aside>

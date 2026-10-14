@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="foot-title">kubikmeter<strong>berechnen</strong></p>
+    <p class="muted">Kostenloser Kubikmeter-Rechner mit Formeln, Beispielen und Glossar.</p>
+    <ul class="flinks">
+      {{- range site.Menus.footer }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+    <p class="muted small">© {{ now.Year }} kubikmeterberechnen.github.io. Alle Angaben ohne Gewähr.</p>
+  </div>
+</footer>

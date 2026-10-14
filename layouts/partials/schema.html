@@ -1,0 +1,69 @@
+{{- if ne .Kind "404" -}}
+{{- $root := site.BaseURL -}}
+{{- $a := site.Data.author -}}
+{{- $orgID := printf "%s#organization" $root -}}
+{{- $siteID := printf "%s#website" $root -}}
+{{- $personID := printf "%sautor/#person" $root -}}
+{{- $pageID := printf "%s#webpage" .Permalink -}}
+{{- $title := .Params.seoTitle | default .Title -}}
+{{- $desc := .Params.description | default site.Params.description -}}
+{{- $img := printf "%sog-image.png" $root -}}
+{{- $isTerm := and (eq .Section "glossar") .IsPage -}}
+{{- $isHub := and (eq .Section "glossar") .IsSection -}}
+{{- $isAuthor := eq .Params.layout "autor" -}}
+
+{{- $person := dict "@type" "Person" "@id" $personID "name" $a.name "url" (printf "%sautor/" $root) "jobTitle" $a.role "description" $a.bioShort "worksFor" (dict "@id" $orgID) -}}
+{{- with $a.sameAs }}{{ $person = merge $person (dict "sameAs" .) }}{{ end -}}
+{{- with $a.knowsAbout }}{{ $person = merge $person (dict "knowsAbout" .) }}{{ end -}}
+{{- $org := dict "@type" "Organization" "@id" $orgID "name" site.Title "url" $root "logo" (dict "@type" "ImageObject" "url" (printf "%slogo-512.png" $root) "width" 512 "height" 512) "founder" (dict "@id" $personID) -}}
+{{- $website := dict "@type" "WebSite" "@id" $siteID "url" $root "name" site.Title "description" site.Params.description "inLanguage" "de-DE" "publisher" (dict "@id" $orgID) -}}
+
+{{- $crumbs := partial "crumbs.html" . -}}
+{{- $bcItems := slice -}}
+{{- range $i, $c := $crumbs -}}
+  {{- $bcItems = $bcItems | append (dict "@type" "ListItem" "position" (add $i 1) "name" $c.name "item" $c.url) -}}
+{{- end -}}
+{{- $bc := dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $bcItems -}}
+
+{{- $pageType := "WebPage" -}}
+{{- $extra := dict -}}
+{{- if $isHub -}}
+  {{- $pageType = slice "WebPage" "CollectionPage" -}}
+  {{- $items := slice -}}
+  {{- range $i, $p := .Pages.ByWeight -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "url" $p.Permalink "name" $p.Title) -}}
+  {{- end -}}
+  {{- $extra = dict "mainEntity" (dict "@type" "ItemList" "numberOfItems" (len $items) "itemListElement" $items) -}}
+{{- else if $isAuthor -}}
+  {{- $pageType = "ProfilePage" -}}
+  {{- $extra = dict "mainEntity" (dict "@id" $personID) -}}
+{{- end -}}
+
+{{- $page := merge (dict "@type" $pageType "@id" $pageID "url" .Permalink "name" $title "description" $desc "inLanguage" "de-DE" "isPartOf" (dict "@id" $siteID) "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink)) "datePublished" (.Date.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02")) $extra -}}
+{{- $graph := slice $website $org $person $page $bc -}}
+
+{{- if or .IsHome $isTerm -}}
+  {{- $article := dict "@type" "Article" "@id" (printf "%s#article" .Permalink) "headline" (.Params.h1 | default .Title) "description" $desc "image" $img "datePublished" (.Date.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02") "inLanguage" "de-DE" "mainEntityOfPage" (dict "@id" $pageID) "author" (dict "@id" $personID) "publisher" (dict "@id" $orgID) "isPartOf" (dict "@id" $siteID) "wordCount" .WordCount -}}
+  {{- if $isTerm -}}
+    {{- $hub := site.GetPage "/glossar" -}}
+    {{- $term := dict "@type" "DefinedTerm" "@id" (printf "%s#term" .Permalink) "name" .Title "description" .Params.answer "url" .Permalink "inDefinedTermSet" (dict "@type" "DefinedTermSet" "@id" (printf "%s#termset" $hub.Permalink) "name" "Glossar: Kubikmeter berechnen" "url" $hub.Permalink) -}}
+    {{- $article = merge $article (dict "about" (dict "@id" (printf "%s#term" .Permalink)) "citation" (dict "@type" "CreativeWork" "name" .Params.sourceTitle "url" .Params.sourceURL)) -}}
+    {{- $graph = $graph | append $term -}}
+  {{- end -}}
+  {{- $graph = $graph | append $article -}}
+{{- end -}}
+
+{{- if .IsHome -}}
+  {{- $app := dict "@type" "WebApplication" "@id" (printf "%s#calculator" .Permalink) "name" "Kubikmeter-Rechner" "description" "Online-Rechner zum Berechnen von Kubikmetern für Quader, Zylinder und Kugel inklusive Umrechnung in Liter und Kubikzentimeter." "url" (printf "%s#rechner" .Permalink) "applicationCategory" "UtilitiesApplication" "operatingSystem" "Any" "browserRequirements" "Requires JavaScript" "inLanguage" "de-DE" "isAccessibleForFree" true "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "EUR") "author" (dict "@id" $personID) -}}
+  {{- $graph = $graph | append $app -}}
+{{- end -}}
+
+{{- with .Params.faq -}}
+  {{- $qs := slice -}}
+  {{- range . -}}
+    {{- $qs = $qs | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict "@type" "FAQPage" "@id" (printf "%s#faq" $.Permalink) "inLanguage" "de-DE" "isPartOf" (dict "@id" $pageID) "mainEntity" $qs) -}}
+{{- end -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
+{{- end -}}

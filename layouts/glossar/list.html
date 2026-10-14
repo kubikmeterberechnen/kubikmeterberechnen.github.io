@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="prose">
+  {{ partial "breadcrumb.html" . }}
+  <h1>{{ .Params.h1 | default .Title }}</h1>
+  {{ .Content }}
+  <ul class="cards">
+    {{- range .Pages.ByWeight }}
+    <li><a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2><p>{{ .Params.short }}</p></a></li>
+    {{- end }}
+  </ul>
+  <aside class="cta"><p><strong>Direkt rechnen?</strong> Nutze den <a href="/#rechner">Kubikmeter-Rechner</a> für Quader, Zylinder und Kugel.</p></aside>
+</article>
+{{ partial "author-box.html" . }}
+{{ end }}

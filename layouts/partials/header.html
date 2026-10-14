@@ -1,0 +1,18 @@
+{{ $cur := . }}
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Kubikmeter berechnen, Startseite">
+      <svg class="mark" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M16 4l11 6v12l-11 6-11-6V10z M16 16v12 M5 10l11 6 11-6"/></svg>
+      <span>kubikmeter<strong>berechnen</strong></span>
+    </a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen"><span></span><span></span></button>
+    <nav id="menu" class="menu" aria-label="Hauptnavigation">
+      <ul>
+        {{- range site.Menus.main }}
+        {{- $url := .URL }}
+        <li><a href="{{ $url }}"{{ if and (ne $url "/") (hasPrefix $cur.RelPermalink $url) }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,7 @@
+{{ define "main" }}
+<article class="prose">
+  {{ partial "breadcrumb.html" . }}
+  <h1>{{ .Params.h1 | default .Title }}</h1>
+  {{ .Content }}
+</article>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ $cur := . }}
+<section class="related" aria-labelledby="rel-h">
+  <h2 id="rel-h">{{ if .IsHome }}Begriffe aus dem Glossar{{ else }}Verwandte Begriffe{{ end }}</h2>
+  <ul>
+    {{- range (where site.RegularPages "Section" "glossar").ByWeight }}
+    {{- if ne .RelPermalink $cur.RelPermalink }}
+    <li><a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong><span>{{ .Params.short }}</span></a></li>
+    {{- end }}
+    {{- end }}
+  </ul>
+  {{- if not .IsHome }}
+  <p><a href="/glossar/">Alle Begriffe im Glossar</a></p>
+  {{- end }}
+</section>

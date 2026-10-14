@@ -1,0 +1,10 @@
+{{- $crumbs := slice -}}
+{{- if .IsHome -}}
+  {{- $crumbs = slice (dict "name" "Startseite" "url" .Permalink) -}}
+{{- else -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- $crumbs = $crumbs | append (dict "name" (cond .IsHome "Startseite" (.Params.crumb | default .Title)) "url" .Permalink) -}}
+  {{- end -}}
+  {{- $crumbs = $crumbs | append (dict "name" (.Params.crumb | default .Title) "url" .Permalink) -}}
+{{- end -}}
+{{- return $crumbs -}}

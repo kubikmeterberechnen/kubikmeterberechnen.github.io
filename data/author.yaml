@@ -1,0 +1,11 @@
+# TODO: Alle Angaben durch deine echten Daten ersetzen (wichtig für E-E-A-T).
+name: "Max Mustermann"
+role: "Autor für Maßeinheiten und Volumenberechnung"
+bioShort: "Erklärt Rechenwege rund um Volumen, Maßeinheiten und Umrechnung verständlich und nachvollziehbar."
+bio: "Max Mustermann schreibt auf dieser Seite über Volumenberechnung, Maßeinheiten und Umrechnungen. Ziel ist, dass jeder Rechenweg in wenigen Schritten nachvollziehbar ist. Formeln werden vor der Veröffentlichung nachgerechnet und mit Fachquellen abgeglichen."
+knowsAbout:
+  - "Volumenberechnung"
+  - "Maßeinheiten"
+  - "Internationales Einheitensystem (SI)"
+  - "Geometrie"
+sameAs: []

@@ -1,0 +1,34 @@
+{{- $t := .Get 0 -}}
+<figure class="diagram">
+{{- if eq $t "quader" -}}
+<svg viewBox="0 0 220 170" role="img" aria-label="Quader mit Länge l, Breite b und Höhe h" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<path d="M30 60h120v80H30z M30 60l50-40h120l-50 40 M200 20v80l-50 40"/>
+<path d="M80 20v80h120 M80 100l-50 40" stroke-dasharray="4 4" opacity=".6"/>
+<g fill="currentColor" stroke="none" font-size="14" font-style="italic" font-family="Inter,sans-serif"><text x="88" y="160">l</text><text x="12" y="104">h</text><text x="186" y="136">b</text></g>
+</svg>
+{{- else if eq $t "wuerfel" -}}
+<svg viewBox="0 0 200 170" role="img" aria-label="Würfel mit Kantenlänge a" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<path d="M30 60h90v90H30z M30 60l40-35h90l-40 35 M160 25v90l-40 35"/>
+<path d="M70 25v90h90 M70 115l-40 35" stroke-dasharray="4 4" opacity=".6"/>
+<g fill="currentColor" stroke="none" font-size="14" font-style="italic" font-family="Inter,sans-serif"><text x="72" y="168">a</text><text x="12" y="108">a</text><text x="150" y="146">a</text></g>
+</svg>
+{{- else if eq $t "zylinder" -}}
+<svg viewBox="0 0 200 150" role="img" aria-label="Zylinder mit Radius r und Höhe h" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<ellipse cx="90" cy="30" rx="50" ry="14"/>
+<path d="M40 30v90 M140 30v90 M40 120a50 14 0 0 0 100 0"/>
+<path d="M40 120a50 14 0 0 1 100 0" stroke-dasharray="4 4" opacity=".6"/>
+<path d="M90 30h50" stroke-dasharray="4 4"/>
+<path d="M165 30v90 M160 34l5-6 5 6 M160 116l5 6 5-6"/>
+<g fill="currentColor" stroke="none" font-size="14" font-style="italic" font-family="Inter,sans-serif"><text x="112" y="24">r</text><text x="175" y="80">h</text></g>
+</svg>
+{{- else if eq $t "kugel" -}}
+<svg viewBox="0 0 200 140" role="img" aria-label="Kugel mit Radius r" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<circle cx="100" cy="70" r="55"/>
+<ellipse cx="100" cy="70" rx="55" ry="16" stroke-dasharray="4 4" opacity=".6"/>
+<path d="M100 70h55"/>
+<circle cx="100" cy="70" r="2" fill="currentColor"/>
+<g fill="currentColor" stroke="none" font-size="14" font-style="italic" font-family="Inter,sans-serif"><text x="124" y="64">r</text></g>
+</svg>
+{{- end -}}
+{{- with .Get 1 }}<figcaption>{{ . }}</figcaption>{{ end -}}
+</figure>

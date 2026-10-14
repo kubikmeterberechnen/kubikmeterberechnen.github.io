@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="prose">
+  {{ partial "breadcrumb.html" . }}
+  <h1>{{ .Params.h1 | default .Title }}</h1>
+  <p class="meta">Von <a href="/autor/" rel="author">{{ site.Data.author.name }}</a>, aktualisiert am <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time></p>
+  <p class="answer" id="kurzantwort">{{ .Params.answer }}</p>
+  <details class="toc"><summary>Inhalt</summary>{{ .TableOfContents }}</details>
+  {{ .Content }}
+  <aside class="cta"><p><strong>Kubikmeter berechnen?</strong> Mit dem <a href="/#rechner">Online-Rechner</a> bekommst du das Ergebnis in m³, Liter und cm³.</p></aside>
+  {{ partial "faq.html" . }}
+  <section class="source">
+    <h2>Quelle</h2>
+    <p>Hintergrund: <a href="{{ .Params.sourceURL }}" rel="noopener" target="_blank">{{ .Params.sourceTitle }}</a>. Die Erklärungen und Beispiele auf dieser Seite sind eigenständig formuliert.</p>
+  </section>
+</article>
+{{ partial "related.html" . }}
+{{ partial "author-box.html" . }}
+{{ end }}

@@ -1,0 +1,55 @@
+<section id="rechner" class="calc" aria-labelledby="calc-title">
+  <h2 id="calc-title">Kubikmeter-Rechner</h2>
+  <form id="calc-form" novalidate autocomplete="off">
+    <div class="grid">
+      <div class="field">
+        <label for="shape">Körperform</label>
+        <select id="shape" name="shape">
+          <option value="quader" selected>Quader oder Würfel</option>
+          <option value="zylinder">Zylinder</option>
+          <option value="kugel">Kugel</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="unit">Einheit der Maße</label>
+        <select id="unit" name="unit">
+          <option value="m" selected>Meter (m)</option>
+          <option value="dm">Dezimeter (dm)</option>
+          <option value="cm">Zentimeter (cm)</option>
+          <option value="mm">Millimeter (mm)</option>
+        </select>
+      </div>
+      <div class="field" data-shapes="quader">
+        <label for="l">Länge</label>
+        <input id="l" name="l" type="text" inputmode="decimal" placeholder="z. B. 4">
+      </div>
+      <div class="field" data-shapes="quader">
+        <label for="b">Breite</label>
+        <input id="b" name="b" type="text" inputmode="decimal" placeholder="z. B. 5">
+      </div>
+      <div class="field" data-shapes="zylinder kugel">
+        <label for="r">Radius</label>
+        <input id="r" name="r" type="text" inputmode="decimal" placeholder="z. B. 0,5">
+      </div>
+      <div class="field" data-shapes="quader zylinder">
+        <label for="h">Höhe</label>
+        <input id="h" name="h" type="text" inputmode="decimal" placeholder="z. B. 2,5">
+      </div>
+      <div class="field">
+        <label for="qty">Anzahl (Stück)</label>
+        <input id="qty" name="qty" type="text" inputmode="decimal" value="1">
+      </div>
+    </div>
+    <p class="formula">Formel: <span id="formula">V = l × b × h</span></p>
+    <div class="result" role="status" aria-live="polite">
+      <div class="main"><span id="res-m3">–</span> <span class="u">m³</span></div>
+      <dl class="sub">
+        <div><dt>Liter</dt><dd id="res-l">–</dd></div>
+        <div><dt>cm³</dt><dd id="res-cm3">–</dd></div>
+      </dl>
+      <p id="calc-note" class="note">Gib die Maße ein. Dezimalzahlen mit Komma oder Punkt.</p>
+    </div>
+    <button type="reset" class="btn">Zurücksetzen</button>
+    <noscript><p class="note">Für den Rechner wird JavaScript benötigt. Die Formeln findest du unten im Text.</p></noscript>
+  </form>
+</section>

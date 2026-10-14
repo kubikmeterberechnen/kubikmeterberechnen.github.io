@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ $a := site.Data.author }}
+<article class="prose">
+  {{ partial "breadcrumb.html" . }}
+  <h1>{{ .Params.h1 | default .Title }}</h1>
+  <div class="profile">
+    <div class="avatar big" aria-hidden="true">{{ substr $a.name 0 1 }}</div>
+    <div>
+      <p class="who"><strong>{{ $a.name }}</strong></p>
+      <p class="muted">{{ $a.role }}</p>
+    </div>
+  </div>
+  <p>{{ $a.bio }}</p>
+  {{ with $a.knowsAbout }}
+  <h2>Fachgebiete</h2>
+  <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  {{ end }}
+  {{ with $a.sameAs }}
+  <h2>Profile</h2>
+  <ul>{{ range . }}<li><a href="{{ . }}" rel="me noopener">{{ . }}</a></li>{{ end }}</ul>
+  {{ end }}
+  {{ .Content }}
+</article>
+{{ end }}
